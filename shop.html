@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>חנות מוצרי טיפוח | M.E.C – שירלי ימין קוסמטיקאית רפואית</title>
+    <meta name="description" content="חנות מוצרי הטיפוח המקצועיים של שירלי ימין בכפר יונה – תכשירים פעילים מבית Dr. Kadir, PHARM FOOT ו-PHD. משלוחים והזמנה ישירה בוואטסאפ.">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .shop-hero {
+            padding-top: calc(130px + env(safe-area-inset-top));
+            padding-bottom: 36px;
+            background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-secondary) 100%);
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .shop-hero {
+                padding-top: calc(105px + env(safe-area-inset-top));
+                padding-bottom: 24px;
+            }
+            .shop-hero h1 {
+                font-size: 1.85rem;
+            }
+        }
+
+        .disclaimer-section {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-soft);
+            padding: 40px 0;
+            margin-top: 80px;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-light);
+        }
+
+        .no-results i {
+            font-size: 2.5rem;
+            color: var(--gold-dark);
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body class="shop-page">
+
+    <!-- Fixed Top Navigation Wrapper -->
+    <div class="header-wrapper">
+        <div class="personal-notice-top">
+            כל הטיפולים מבוצעים באופן אישי על ידי <strong>שירלי ימין</strong> בלבד.
+        </div>
+
+        <header class="site-header">
+            <div class="container header-inner">
+                <a href="index.html" class="logo" aria-label="שירלי ימין - דף הבית">
+                    <span class="logo-main-he">שירלי ימין</span>
+                    <span class="logo-sub-en">Medical Esthetic</span>
+                </a>
+
+                <nav class="desktop-nav" aria-label="תפריט ראשי">
+                    <a href="index.html">הבית</a>
+                    <a href="about.html">אודות</a>
+                    <a href="treatments.html">טיפולים</a>
+                    <a href="pricing.html">מחירון</a>
+                    <a href="shop.html" class="active">חנות מוצרים</a>
+                    <a href="contact.html">צור קשר</a>
+                </nav>
+
+                <div class="header-actions">
+                    <a href="https://wa.me/972544410760?text=היי%20שירלי,%20אשמח%20לתאם%20תור%20בקליניקה." target="_blank" rel="noopener noreferrer" class="btn-header-cta" aria-label="תיאום תור בוואטסאפ">
+                        <i class="fab fa-whatsapp"></i> <span class="cta-text-full">לתיאום תור</span><span class="cta-text-short">תור</span>
+                    </a>
+                    <button class="cart-btn" aria-label="פתיחת סל הקניות" type="button">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span id="cartCount" class="badge">0</span>
+                    </button>
+                    <button class="menu-trigger" aria-label="פתח תפריט ניווט" type="button">
+                        <div class="hamburger">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-nav-overlay"></div>
+    <div class="mobile-nav-drawer">
+        <div>
+            <div class="drawer-top">
+                <div class="logo">
+                    <span class="logo-main-he">שירלי ימין</span>
+                    <span class="logo-sub-en">Medical Esthetic</span>
+                </div>
+                <button class="drawer-close" aria-label="סגור תפריט" type="button"><i class="fas fa-times"></i></button>
+            </div>
+            <nav class="drawer-nav">
+                <a href="index.html">הבית</a>
+                <a href="about.html">אודות</a>
+                <a href="treatments.html">טיפולים</a>
+                <a href="pricing.html">מחירון</a>
+                <a href="shop.html" class="active">חנות מוצרים</a>
+                <a href="contact.html">צור קשר</a>
+            </nav>
+        </div>
+        <div class="drawer-footer">
+            <p><i class="fas fa-map-marker-alt"></i> שדרות מנחם בגין 56, כפר יונה</p>
+            <p><i class="fas fa-phone"></i> <a href="tel:0544410760">054-441-0760</a></p>
+            <a href="https://wa.me/972544410760?text=היי%20שירלי,%20אשמח%20לתאם%20תור%20בקליניקה." target="_blank" rel="noopener noreferrer" class="btn btn-wa mt-2" style="width:100%; padding:12px;">
+                <i class="fab fa-whatsapp"></i> תיאום תור בוואטסאפ
+            </a>
+        </div>
+    </div>
+
+    <!-- Shop Hero -->
+    <section class="shop-hero">
+        <div class="container">
+            <div class="section-heading reveal" style="margin-bottom: 20px;">
+                <span class="eyebrow">Medical Cosmeceuticals</span>
+                <h1>חנות מוצרי טיפוח פרא-רפואיים</h1>
+                <p>מגוון תכשירים מקצועיים המבוססים על חומרים פעילים בריכוזים גבוהים, מבית המותגים המובילים בעולם.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collapsible Controls & Filters Bar -->
+    <div class="shop-controls-bar" id="shopControlsBar">
+        <div class="container">
+            <!-- Mobile/Tablet Toggle Button (< 1024px) -->
+            <div class="shop-filter-toggle-wrapper">
+                <button type="button" class="shop-filter-toggle-btn" id="filterToggleBtn" aria-expanded="false" aria-controls="shopFiltersCollapse" aria-label="חיפוש וסינון מוצרים">
+                    <div class="toggle-btn-main">
+                        <span class="toggle-icon-wrap"><i class="fas fa-sliders-h"></i></span>
+                        <span class="toggle-btn-label">חיפוש וסינון מוצרים</span>
+                        <span class="filter-active-badge" id="filterActiveBadge" style="display: none;">0</span>
+                    </div>
+                    <div class="toggle-btn-aside">
+                        <span class="toggle-action-text" id="toggleActionText">פתיחה</span>
+                        <i class="fas fa-chevron-down toggle-chevron" id="filterChevron"></i>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Collapsible Filters Area -->
+            <div class="shop-filters-collapse" id="shopFiltersCollapse">
+                <div class="shop-filters-inner">
+                    <div class="shop-search-bar">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" id="searchInput" placeholder="חפשי מוצר, מרכיב או קטגוריה..." aria-label="חיפוש מוצר" autocomplete="off" autocapitalize="off">
+                        <button type="button" id="searchClearBtn" class="search-clear-btn" aria-label="נקה שדה חיפוש" style="display: none;">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+
+                    <div class="brand-filter-group">
+                        <div class="brand-filter-title">סינון לפי מותג:</div>
+                        <div class="brand-tabs" id="filterTabs" role="tablist">
+                            <button class="brand-tab active" data-brand="all" role="tab" aria-selected="true">כל המותגים</button>
+                            <button class="brand-tab" data-brand="Dr. Kadir" role="tab" aria-selected="false">Dr. Kadir</button>
+                            <button class="brand-tab" data-brand="PHD" role="tab" aria-selected="false">PHD</button>
+                            <button class="brand-tab" data-brand="Pharm Foot" role="tab" aria-selected="false">Pharm Foot</button>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Apply & Reset Bar (< 1024px) -->
+                    <div class="filter-actions-mobile">
+                        <button type="button" class="btn btn-primary filter-apply-btn" id="filterApplyBtn">
+                            <i class="fas fa-check"></i> החלת סינון וצפייה בתוצאות
+                        </button>
+                        <button type="button" class="filter-reset-btn" id="filterResetBtn">
+                            <i class="fas fa-undo"></i> איפוס
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Grid Content -->
+    <main class="container" style="min-height: 50vh;">
+        <div id="shopContent">
+            <div class="no-results">
+                <i class="fas fa-circle-notch fa-spin"></i>
+                <p>טוען מוצרים...</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Product Disclaimer -->
+    <section class="disclaimer-section">
+        <div class="container">
+            <div class="price-disclaimer text-center" style="max-width: 800px; margin: 0 auto; background: var(--bg-card);">
+                <strong style="color: var(--text-main); display: block; margin-bottom: 6px;">דיסקליימר לתכשירי החנות:</strong>
+                <p style="margin: 0; font-size: 0.88rem; line-height: 1.7;">
+                    תמונות המוצרים נועדו להמחשה בלבד בהתאם לקטלוג היצרנים הרשמי. ייתכנו שינויים בעיצובי האריזות מעת לעת על ידי היצרן. המחירים והמלאי עשויים להשתנות. השימוש בתכשירים בעלי חומרים פעילים מומלץ לאחר אבחון אישי והתאמה מדויקת לסוג עורך.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo mb-2" style="margin-bottom: 16px;">
+                        <span class="logo-main-he">שירלי ימין</span>
+                        <span class="logo-sub-en">Medical Esthetic</span>
+                    </div>
+                    <p>קליניקת M.E.C בכפר יונה – קוסמטיקה רפואית מתקדמת, טיפולי פנים, פדיקור רפואי ושיקום העור. כל הטיפולים ניתנים באופן אישי על ידי שירלי ימין.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>ניווט באתר</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">דף הבית</a></li>
+                        <li><a href="about.html">אודות שירלי</a></li>
+                        <li><a href="treatments.html">תפריט טיפולים</a></li>
+                        <li><a href="pricing.html">מחירון טיפולים</a></li>
+                        <li><a href="shop.html">חנות מוצרים</a></li>
+                        <li><a href="contact.html">צור קשר</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>יצירת קשר ורשתות</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> שדרות מנחם בגין 56, כפר יונה</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:0544410760">054-441-0760</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/972544410760" target="_blank" rel="noopener noreferrer">וואטסאפ אישי</a></li>
+                    </ul>
+
+                    <div class="footer-social-icons">
+                        <a href="https://www.instagram.com/shirleyyamin/" target="_blank" rel="noopener noreferrer" aria-label="אינסטגרם – שירלי ימין"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/100063582759844/" target="_blank" rel="noopener noreferrer" aria-label="פייסבוק – שירלי ימין"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.tiktok.com/@shirley.y" target="_blank" rel="noopener noreferrer" aria-label="טיקטוק – שירלי ימין"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="price-disclaimer" style="margin: 0; padding: 0; background: none; border: none; font-size: 0.85rem;">
+                    מחיר התחלתי – עלול להשתנות לפי מצב רפואי וייעוץ אישי של שירלי ימין.
+                </p>
+                <p style="margin: 0;">כל הזכויות שמורות &copy; 2026 M.E.C – שירלי ימין</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="nav.js"></script>
+    <script>
+        (function() {
+            function getList() {
+                return (typeof products !== 'undefined' && products) ? products : (window.products || []);
+            }
+
+            // Elements
+            var controlsBar = document.getElementById('shopControlsBar');
+            var toggleBtn = document.getElementById('filterToggleBtn');
+            var collapsePanel = document.getElementById('shopFiltersCollapse');
+            var toggleActionText = document.getElementById('toggleActionText');
+            var chevron = document.getElementById('filterChevron');
+            var badge = document.getElementById('filterActiveBadge');
+            var searchInput = document.getElementById('searchInput');
+            var clearBtn = document.getElementById('searchClearBtn');
+            var applyBtn = document.getElementById('filterApplyBtn');
+            var resetBtn = document.getElementById('filterResetBtn');
+
+            function isMobile() {
+                return window.innerWidth < 1024;
+            }
+
+            function updateFilterActiveBadge() {
+                var count = 0;
+                if (window._shopBrand && window._shopBrand !== 'all') count++;
+                if (window._shopQuery && window._shopQuery.trim().length > 0) count++;
+
+                if (badge) {
+                    if (count > 0) {
+                        badge.textContent = count;
+                        badge.style.display = 'inline-flex';
+                    } else {
+                        badge.style.display = 'none';
+                    }
+                }
+
+                if (clearBtn && searchInput) {
+                    clearBtn.style.display = searchInput.value.trim().length > 0 ? 'inline-flex' : 'none';
+                }
+            }
+
+            function openFilters() {
+                if (!controlsBar || !collapsePanel) return;
+                controlsBar.classList.add('is-expanded');
+                collapsePanel.classList.add('show');
+                if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'true');
+                if (toggleActionText) toggleActionText.textContent = 'סגירה';
+                if (chevron) chevron.style.transform = 'rotate(180deg)';
+            }
+
+            function closeFilters() {
+                if (!controlsBar || !collapsePanel) return;
+                controlsBar.classList.remove('is-expanded');
+                collapsePanel.classList.remove('show');
+                if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
+                if (toggleActionText) toggleActionText.textContent = 'פתיחה';
+                if (chevron) chevron.style.transform = '';
+            }
+
+            function toggleFilters() {
+                if (controlsBar && controlsBar.classList.contains('is-expanded')) {
+                    closeFilters();
+                } else {
+                    openFilters();
+                }
+            }
+
+            function renderProducts() {
+                var shopContent = document.getElementById('shopContent');
+                if (!shopContent) return;
+
+                var list = getList();
+                var activeBrand = (window._shopBrand || 'all').trim().toLowerCase();
+                var searchQuery = (window._shopQuery || '').trim().toLowerCase();
+
+                if (!list || list.length === 0) {
+                    shopContent.innerHTML = '<div class="no-results"><i class="fas fa-exclamation-triangle"></i><h3>לא נמצאו מוצרים</h3><p>אנא רעננו את הדף</p></div>';
+                    return;
+                }
+
+                var filtered = list.filter(function(p) {
+                    var pBrand = (p.brand || '').trim().toLowerCase();
+                    var matchBrand = activeBrand === 'all' || pBrand === activeBrand || 
+                                     (activeBrand === 'dr. kadir' && (pBrand === 'dr kadir' || pBrand === 'dr.kadir'));
+                    
+                    var matchSearch = !searchQuery || 
+                        (p.name && p.name.toLowerCase().indexOf(searchQuery) !== -1) ||
+                        (p.category && p.category.toLowerCase().indexOf(searchQuery) !== -1) ||
+                        (pBrand && pBrand.indexOf(searchQuery) !== -1) ||
+                        (p.description && p.description.toLowerCase().indexOf(searchQuery) !== -1) ||
+                        (p.ingredients && p.ingredients.toLowerCase().indexOf(searchQuery) !== -1);
+                    return matchBrand && matchSearch;
+                });
+
+                if (filtered.length === 0) {
+                    shopContent.innerHTML = '<div class="no-results"><i class="fas fa-search"></i><h3>לא נמצאו מוצרים תואמים לחיפוש</h3><p>נסו לשנות את מילת החיפוש או לבחור מותג אחר</p></div>';
+                    return;
+                }
+
+                // Group by Brand -> Category
+                var byBrand = {};
+                filtered.forEach(function(p) {
+                    if (!byBrand[p.brand]) byBrand[p.brand] = {};
+                    if (!byBrand[p.brand][p.category]) byBrand[p.brand][p.category] = [];
+                    byBrand[p.brand][p.category].push(p);
+                });
+
+                var placeholderSvg = '<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300"><rect width="300" height="300" fill="%23FAF8F4"/><text x="150" y="155" text-anchor="middle" font-family="sans-serif" font-size="16" fill="%23C5A675">M.E.C</text></svg>';
+                window.__shopPlaceholder = 'data:image/svg+xml,' + encodeURIComponent(placeholderSvg);
+                var baseImgPath = 'images/products/';
+
+                var html = '';
+                for (var brand in byBrand) {
+                    html += '<div class="brand-block"><h2 class="brand-title-main">' + brand + '</h2>';
+                    for (var cat in byBrand[brand]) {
+                        html += '<div class="category-group"><h3 class="category-title">' + cat + '</h3><div class="product-grid">';
+                        byBrand[brand][cat].forEach(function(p) {
+                            var name = (p.name || '').replace(/"/g, '&quot;');
+                            var vol = p.volume || '';
+                            var price = p.price || 0;
+                            var desc = (p.description || '').replace(/"/g, '&quot;');
+                            var img = (p.image && p.image.trim()) ? (baseImgPath + p.image) : window.__shopPlaceholder;
+
+                            html += '<article class="product-card">' +
+                                '<div class="product-image-container" onclick="openProductModal(\'' + p.id + '\')" role="button" tabindex="0" aria-label="פרטי מוצר: ' + name + '">' +
+                                '<img src="' + img + '" alt="' + name + '" onerror="this.onerror=null;this.src=window.__shopPlaceholder" loading="lazy">' +
+                                '</div>' +
+                                '<div class="product-info">' +
+                                '<h4 class="product-name" title="' + name + '">' + name + '</h4>' +
+                                (vol ? '<div class="product-volume">' + vol + '</div>' : '') +
+                                '<div class="product-price">₪' + price + '</div>' +
+                                (desc ? '<p class="product-desc">' + desc + '</p>' : '') +
+                                '<div class="product-actions">' +
+                                '<button onclick="addToCartById(\'' + p.id + '\')" class="btn btn-primary btn-add-cart" aria-label="הוסף לסל: ' + name + '"><i class="fas fa-cart-plus"></i> הוספה לסל</button>' +
+                                '<button type="button" class="product-details-link" onclick="openProductModal(\'' + p.id + '\')">לפרטים נוספים ורכיבים</button>' +
+                                '</div>' +
+                                '</div></article>';
+                        });
+                        html += '</div></div>';
+                    }
+                    html += '</div>';
+                }
+                shopContent.innerHTML = html;
+
+                if (window.refreshReveal) {
+                    window.refreshReveal();
+                }
+            }
+
+            function init() {
+                window._shopBrand = 'all';
+                window._shopQuery = '';
+
+                // Toggle Button Event
+                if (toggleBtn) {
+                    toggleBtn.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        toggleFilters();
+                    });
+                }
+
+                // Search Input Event
+                if (searchInput) {
+                    searchInput.addEventListener('input', function() {
+                        window._shopQuery = this.value;
+                        updateFilterActiveBadge();
+                        renderProducts();
+                    });
+                }
+
+                // Search Clear ("X") Button
+                if (clearBtn && searchInput) {
+                    clearBtn.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        searchInput.value = '';
+                        window._shopQuery = '';
+                        updateFilterActiveBadge();
+                        renderProducts();
+                        searchInput.focus();
+                    });
+                }
+
+                // Brand Filter Tabs
+                var filterTabs = document.querySelectorAll('.brand-tab');
+                filterTabs.forEach(function(tab) {
+                    tab.addEventListener('click', function() {
+                        filterTabs.forEach(function(t) { 
+                            t.classList.remove('active');
+                            t.setAttribute('aria-selected', 'false');
+                        });
+                        tab.classList.add('active');
+                        tab.setAttribute('aria-selected', 'true');
+                        window._shopBrand = (tab.dataset.brand || 'all').trim();
+                        updateFilterActiveBadge();
+                        renderProducts();
+                    });
+                });
+
+                // Apply Button (closes collapsible panel on mobile)
+                if (applyBtn) {
+                    applyBtn.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        closeFilters();
+                        // Smoothly scroll to product list if needed
+                        var shopContent = document.getElementById('shopContent');
+                        if (shopContent && window.scrollY > 200) {
+                            var offset = 140;
+                            var top = shopContent.getBoundingClientRect().top + window.scrollY - offset;
+                            window.scrollTo({ top: top, behavior: 'smooth' });
+                        }
+                    });
+                }
+
+                // Reset Button
+                if (resetBtn) {
+                    resetBtn.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        if (searchInput) searchInput.value = '';
+                        window._shopQuery = '';
+                        window._shopBrand = 'all';
+                        filterTabs.forEach(function(t) {
+                            var isAll = (t.dataset.brand || 'all') === 'all';
+                            t.classList.toggle('active', isAll);
+                            t.setAttribute('aria-selected', isAll ? 'true' : 'false');
+                        });
+                        updateFilterActiveBadge();
+                        renderProducts();
+                        closeFilters();
+                    });
+                }
+
+                // Auto-collapse when user scrolls down
+                var lastScrollY = window.scrollY;
+                window.addEventListener('scroll', function() {
+                    var currentScrollY = window.scrollY;
+                    if (isMobile() && controlsBar && controlsBar.classList.contains('is-expanded')) {
+                        if (currentScrollY > lastScrollY + 30) {
+                            closeFilters();
+                        }
+                    }
+                    lastScrollY = currentScrollY;
+                }, { passive: true });
+
+                // Auto-collapse when user taps outside the controls bar
+                document.addEventListener('click', function(e) {
+                    if (isMobile() && controlsBar && controlsBar.classList.contains('is-expanded')) {
+                        if (!controlsBar.contains(e.target)) {
+                            closeFilters();
+                        }
+                    }
+                });
+
+                // Window resize listener: if resized to desktop, clear mobile expanded state
+                window.addEventListener('resize', function() {
+                    if (!isMobile() && controlsBar && controlsBar.classList.contains('is-expanded')) {
+                        closeFilters();
+                    }
+                });
+
+                // Initial render
+                updateFilterActiveBadge();
+                setTimeout(renderProducts, 50);
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', init);
+            } else {
+                init();
+            }
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+var products = [
+  { id: "test", name: "Test Product", brand: "Dr. Kadir", category: "Test", volume: "100 ml", price: 100, description: "Test", image: "images/products/placeholder.jpg", fullDescription: "Test description" }
+];
+
+if (typeof window !== 'undefined') {
+  window.products = products;
+}
