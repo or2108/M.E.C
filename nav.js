@@ -680,9 +680,39 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Permanently remove Netlify deploy badge / feedback widgets if injected
+    const removeNetlifyWidgets = () => {
+        const netlifySelectors = [
+            '#netlify-deploy-badge',
+            '.netlify-badge',
+            '[data-netlify-badge]',
+            '[data-netlify-drawer]',
+            '[id*="netlify-deploy"]',
+            '[id*="netlify-badge"]',
+            '[class*="netlify-feedback"]',
+            'iframe[src*="netlify"]',
+            'img[src*="netlify.com"]',
+            'img[src*="api.netlify.com"]',
+            'a[href*="netlify.com/deploys"]',
+            'a[href*="api.netlify.com"]'
+        ];
+        document.querySelectorAll(netlifySelectors.join(',')).forEach(el => {
+            const wrapper = el.closest('div[style*="fixed"], div[style*="absolute"]');
+            if (wrapper && wrapper !== document.body) {
+                wrapper.remove();
+            } else {
+                el.remove();
+            }
+        });
+    };
+    removeNetlifyWidgets();
+    setTimeout(removeNetlifyWidgets, 1000);
+    setTimeout(removeNetlifyWidgets, 3000);
+
     // Initialize Saved Accessibility Settings Immediately
     applyA11ySettings(getA11ySettings());
 
     // Initialize Cart Badge
     updateCartUI();
 });
+

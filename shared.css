@@ -3038,3 +3038,39 @@ html.a11y-readable-font * {
     font-family: Arial, "Heebo", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif !important;
     letter-spacing: 0.02em !important;
 }
+
+/* ─── Hide Netlify Deploy Badges & Injected Floating Widgets ─── */
+#netlify-deploy-badge,
+.netlify-badge,
+[data-netlify-badge],
+[data-netlify-drawer],
+[id*="netlify-deploy"],
+[id*="netlify-badge"],
+[class*="netlify-feedback"],
+[class*="netlify-badge"],
+iframe[src*="netlify"],
+img[src*="netlify.com"],
+img[src*="api.netlify.com"],
+img[alt*="Netlify" i],
+img[alt*="Deploys by Netlify" i],
+a[href*="netlify.com/deploys"],
+a[href*="api.netlify.com"],
+div:has(> a[href*="netlify.com/deploys"]),
+div:has(> a[href*="api.netlify.com"]),
+div:has(> img[alt*="Netlify" i]) {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0) !important;
+    clip-path: inset(50%) !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    z-index: -9999 !important;
+}
+
