@@ -3040,24 +3040,28 @@ html.a11y-readable-font * {
 }
 
 /* ─── Hide Netlify Deploy Badges & Injected Floating Widgets ─── */
+netlify-badge,
 #netlify-deploy-badge,
 .netlify-badge,
 [data-netlify-badge],
 [data-netlify-drawer],
 [id*="netlify-deploy"],
 [id*="netlify-badge"],
+[id*="netlify"],
 [class*="netlify-feedback"],
 [class*="netlify-badge"],
+[class*="netlify"],
 iframe[src*="netlify"],
 img[src*="netlify.com"],
 img[src*="api.netlify.com"],
 img[alt*="Netlify" i],
 img[alt*="Deploys by Netlify" i],
-a[href*="netlify.com/deploys"],
-a[href*="api.netlify.com"],
-div:has(> a[href*="netlify.com/deploys"]),
+a[href*="netlify.com"],
+a[href*="netlify.app"],
+div:has(> a[href*="netlify.com"]),
 div:has(> a[href*="api.netlify.com"]),
-div:has(> img[alt*="Netlify" i]) {
+div:has(> img[alt*="Netlify" i]),
+div:has(> netlify-badge) {
     display: none !important;
     visibility: hidden !important;
     opacity: 0 !important;

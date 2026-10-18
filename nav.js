@@ -683,31 +683,54 @@ document.addEventListener('DOMContentLoaded', () => {
     // Permanently remove Netlify deploy badge / feedback widgets if injected
     const removeNetlifyWidgets = () => {
         const netlifySelectors = [
+            'netlify-badge',
             '#netlify-deploy-badge',
             '.netlify-badge',
             '[data-netlify-badge]',
             '[data-netlify-drawer]',
-            '[id*="netlify-deploy"]',
-            '[id*="netlify-badge"]',
-            '[class*="netlify-feedback"]',
+            '[id*="netlify"]',
+            '[class*="netlify"]',
             'iframe[src*="netlify"]',
             'img[src*="netlify.com"]',
             'img[src*="api.netlify.com"]',
-            'a[href*="netlify.com/deploys"]',
-            'a[href*="api.netlify.com"]'
+            'a[href*="netlify.com"]',
+            'a[href*="netlify.app"]'
         ];
         document.querySelectorAll(netlifySelectors.join(',')).forEach(el => {
-            const wrapper = el.closest('div[style*="fixed"], div[style*="absolute"]');
-            if (wrapper && wrapper !== document.body) {
-                wrapper.remove();
-            } else {
-                el.remove();
-            }
+            try {
+                const wrapper = el.closest('div[style*="fixed"], div[style*="absolute"]');
+                if (wrapper && wrapper !== document.body) {
+                    wrapper.style.display = 'none';
+                    wrapper.remove();
+                } else {
+                    el.style.display = 'none';
+                    el.remove();
+                }
+            } catch (err) {}
         });
     };
     removeNetlifyWidgets();
-    setTimeout(removeNetlifyWidgets, 1000);
+    setTimeout(removeNetlifyWidgets, 500);
+    setTimeout(removeNetlifyWidgets, 1500);
     setTimeout(removeNetlifyWidgets, 3000);
+
+    // Observer to kill Netlify badge the microsecond it gets injected into DOM
+    try {
+        const netlifyObserver = new MutationObserver((mutations) => {
+            for (const mutation of mutations) {
+                for (const node of mutation.addedNodes) {
+                    if (node.nodeType === 1) {
+                        const tag = (node.tagName || '').toLowerCase();
+                        if (tag.includes('netlify') || (node.id && node.id.includes('netlify')) || (node.className && typeof node.className === 'string' && node.className.includes('netlify'))) {
+                            node.style.display = 'none';
+                            node.remove();
+                        }
+                    }
+                }
+            }
+        });
+        netlifyObserver.observe(document.documentElement, { childList: true, subtree: true });
+    } catch (e) {}
 
     // Initialize Saved Accessibility Settings Immediately
     applyA11ySettings(getA11ySettings());
